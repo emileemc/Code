@@ -1,0 +1,10 @@
+install.packages("devtools")
+devtools::install_github("56north/Rmazon")
+product_info <- Rmazon::get_product_info("1593273843")
+install.packages("xml2")
+install.packages("selectr")
+install.packages("XML")
+reviews <- Rmazon::get_reviews("1593273843")
+install.packages("pbapply")
+
+TrueSubset <- reviews[grep("TRUE", reviews$Verified_Purchase), ]
